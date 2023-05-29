@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista Tareas</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Organizador Trello</h1>
+    <button id="crearPDF">PDF</button>
+    <main>
+
+      <section id="sectionForm">
+
+        <!-- FORMULARIO -->
+        <div class="tareasList">
+          <form>
+            <input type="text" placeholder="Agregar titulo" id="tituloTarea">
+
+            <textarea rows="4" cols="30" id="tarea" placeholder="Agregar tarea..."></textarea>
+
+            <select name="selectColor" id="select">
+              <option value="" selected>Prioridad de la tarea</option>
+              <option value="#007bff" class="azul">Sin apuro</option>
+              <option value="#ffff00" class="amarillo">plazo mediano</option>
+              <option value="#ff0000" class="rojo">Urgente</option>
+            </select>
+
+            <div class="formbtnContent">
+              <button class="btn-add" id="agregar">Añadir</button>
+              <button class="btn-delete" id="borrarTodo">Eliminar todo</button>
+
+            </div>
+          </form>
+        </div>
+
+      </section>
+
+      <!-- SECTION TAREAS -->
+      <section id="sectionTareas">
+        <div class="tareas">
+
+        </div>
+
+        <div class="empty">
+          <p>¡Felicidades! Tu bandeja está vacía.</p>
+        </div>
+
+      </section>
+    </main>
+
+  </div>
+
+  <!-- TEMPLATE -->
+  <template>
+    <div class="tareasCard">
+      <button class="delete">x</button>
+      <h3>Titulo</h3>
+      <span class="tareaColor"></span>
+      <div class="tareasCardBody">
+        <p class="tareasPCard">Lorem
+          voluptatum ullam magni quidem natus beatae nihil. </p>
+      </div>
+    </div>
+  </template>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>

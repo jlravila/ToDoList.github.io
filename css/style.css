@@ -1,0 +1,189 @@
+@import url(inputs.css);
+@import url(pdf.css);
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: #6D1033; 
+  color: #0e0d0d;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: #6D1033;
+  /* border: 1px solid red; */
+  padding: 0;
+  margin-top: 0;
+  border-bottom: 3px solid #6D1033;
+}
+
+.container {
+  position: relative;
+  width: 90%;
+  background-color: #E3C8B1;
+  margin: 0 auto;
+  height: 100vh;
+
+  box-shadow: 0px 7px 16px -3px  rgba(109, 16, 51, 0.75);
+  -webkit-box-shadow: 0px 7px 16px -3px rgba(109, 16, 51, 0.75);
+  -moz-box-shadow: 0px 7px 16px -3px rgba(109, 16, 51, 0.75);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*********************************
+* SECTION DEL FORMULARIO
+**********************************/
+#sectionForm {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formbtnContent {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+.btn-add {
+  padding: 5px 15px;
+  color: #fff;
+  background-color: #6D1033;
+
+  width: 50%;
+
+  border: #6D1033;
+  /*outline: none;*/
+  border-radius: 5%;
+}
+
+.btn-add:hover {
+  cursor: pointer;
+  color: black;
+  background-color: #5f848487;
+}
+
+.btn-delete {
+  padding: 5px 15px;
+  color: goldenrod;
+  background-color: black;
+  width: 50%;
+  border: none;
+  outline: none;
+  border-radius: 5%;
+}
+
+.btn-delete:hover {
+  cursor: pointer;
+  background-color: goldenrod;
+  color: black;
+}
+/* TEMPLATE Y MSN DE VACIO*/
+#sectionTareas {
+  width: 60%;
+  align-items: center;
+}
+
+/*CONTENEDOR PRINCIPAL D TAREAS*/
+.tareas {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  flex-grow: 1;
+  gap: 10px;
+}
+
+.empty {
+  color: #2f4f4f;
+  /* border: 1px solid red; */
+  text-align: center;
+  font-weight: bold;
+}
+
+.toggle {
+  display: none;
+}
+
+/*TEMPLATE*/
+.tareasCard {
+  width: 45%;
+  position: relative;
+  padding: 0.5rem;
+
+  box-shadow: 0px 7px 16px -3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 7px 16px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 7px 16px -3px rgba(0, 0, 0, 0.75);
+}
+
+.delete {
+  width: 14px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.tareaColor {
+  position: absolute;
+  top: 10px;
+  width: 80%;
+  height: 10px;
+}
+/*QUERIES*/
+@media (max-width: 700px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0;
+  }
+  .container {
+    min-height: 100vh;
+    height: auto;
+  }
+  #sectionForm {
+    width: 80%;
+  }
+
+  #select {
+    width: 105%;
+  }
+
+  .tareasList {
+    width: 90%;
+  }
+  #sectionTareas {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .tareasCard {
+    width: 90%;
+  }
+  .tareas {
+    justify-content: center;
+  }
+}
